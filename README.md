@@ -1,1 +1,1 @@
-./compile.sh -f [filename without directory path and file extensions] -s {attempt to transfer files to remote server} -d {move file to another destination}
+./compile.sh -f [$.sp filename without directory path and extension] -s {attempt to transfer to a remote server} -d {move plugin to another destination}
