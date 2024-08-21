@@ -3,6 +3,7 @@
 FILE=""
 SFTP=""
 DEST=""
+DEBG=""
 
 # Set these variables for your own system for uploading to a remote host
 SFTP_ADDR=""
@@ -10,12 +11,13 @@ SFTP_PORT=""
 SFTP_USER=""
 SFTP_FLDR=""
 
-while getopts "f:s:d" option; do
+while getopts "f:s:d:D" option; do
 	case $option in
 		f) 	FILE=$OPTARG;;
 		s) 	SFTP=1;;
 		d)	DEST=$OPTARG;;
-		\?)	echo "Usage: compile -f [filename] [-s]";;
+  		D)	DEBG=$OPTARG;;
+		\?)	echo "Usage: compile -f [filename] [-s] [-d destination] [-D debug symbol]";;
 	esac
 done
 
@@ -27,8 +29,13 @@ if [ ! -d "sourcemod/scripting" ] || [ ! -d "sourcemod/plugins" ]; then
 fi
 
 echo "${FILE}.sp compile `date`" > compile.log
-${COMPILER} sourcemod/scripting/${FILE}.sp --show-stats -h DEBUG= --use-stderr >> compile.log
 
+if [ "$DEBG" ]; then
+	${COMPILER} sourcemod/scripting/${FILE}.sp --show-stats -h ${DEBG}= --use-stderr >> compile.log
+else
+	${COMPILER} sourcemod/scripting/${FILE}.sp --show-stats -h --use-stderr >> compile.log
+fi
+ 
 if [ -f ${FILE}.smx ]; then
     	if [ -f sourcemod/plugins/${FILE}.smx ]; then
         	mv --backup=numbered sourcemod/plugins/${FILE}.smx sourcemod/plugins/disabled/
