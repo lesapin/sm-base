@@ -2,17 +2,19 @@
 
 FILE=""
 SFTP=""
+DEST=""
 
 # Set these variables for your own system for uploading to a remote host
-SFTP_ADDR=""
-SFTP_PORT=""
-SFTP_USER=""
-SFTP_FLDR=""
+SFTP_ADDR="mge.me"
+SFTP_PORT="61936"
+SFTP_USER="tfmge"
+SFTP_FLDR="mgeme/plugins"
 
-while getopts "f:s" option; do
+while getopts "f:s:d" option; do
 	case $option in
 		f) 	FILE=$OPTARG;;
 		s) 	SFTP=1;;
+		d)	DEST=$OPTARG;;
 		\?)	echo "Usage: compile -f [filename] [-s]";;
 	esac
 done
@@ -39,7 +41,11 @@ if [ -f ${FILE}.smx ]; then
 EOF
     	fi
 
-    	mv ${FILE}.smx ./sourcemod/plugins/
+	if [ "$DEST" ]; then
+    		mv ${FILE}.smx ${DEST}
+	else
+    		mv ${FILE}.smx ./sourcemod/plugins/
+	fi
 else
     	echo "${COMPILER} failed"
 fi
