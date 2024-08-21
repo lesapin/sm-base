@@ -1,2 +1,10 @@
 compile.*
 start_ssh_agent.sh
+sourcemod/bin/*
+sourcemod/extensions/*
+sourcemod/data/*
+sourcemod/gamedata/core.games/*
+sourcemod/gamedata/sdkhooks.games/*
+sourcemod/gamedata/sdktools.games/*
+sourcemod/gamedata/sm-cstrike.games/*
+sourcemod/gamedata/sm-tf2.games.txt
