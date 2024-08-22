@@ -1,5 +1,5 @@
 CC := ./spcomp
-FILE := mgestats
+FILE := 
 OUT := $(FILE).smx
 BUILD_DIR := ../plugins
 INSTALL_DIR := ./
