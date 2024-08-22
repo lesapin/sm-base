@@ -4,10 +4,10 @@ OUT := $(FILE).smx
 BUILD_DIR := ../plugins
 INSTALL_DIR := ./
 
-SFTP_ADDR=mge.me
-SFTP_PORT=61936
-SFTP_USER=tfmge
-SFTP_FLDR=mgeme/plugins
+SFTP_ADDR=
+SFTP_PORT=
+SFTP_USER=
+SFTP_FLDR=
 
 $(BUILD_DIR)/$(OUT): $(FILE).sp
 	$(CC) $^
