@@ -1,5 +1,5 @@
 CC := ./spcomp
-FILE := mgestats
+FILE := ""
 BUILD_DIR := ../plugins
 
 SFTP_ADDR=""
