@@ -1,2 +1,3 @@
-ssh-agent bash
+#!/bin/bash
+ssh-agent -s
 ssh-add ""
