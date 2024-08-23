@@ -11,6 +11,7 @@ sourcemod/gamedata/sdktools.games/*
 sourcemod/gamedata/sm-cstrike.games/*
 sourcemod/gamedata/sm-tf2.games.txt
 sourcemod/configs/databases.cfg
+sourcemod/configs/empty
 sourcemod/plugins/empty
 sourcemod/plugins/disabled/empty
 sourcemod/translations/empty
