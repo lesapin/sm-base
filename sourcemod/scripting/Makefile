@@ -10,7 +10,11 @@ SFTP_USER=
 SFTP_FLDR=
 
 $(BUILD_DIR)/$(OUT): $(FILE).sp
-	$(CC) $^
+	$(CC) -o $(OUT) $^
+	mv $(OUT) $(BUILD_DIR)
+
+debug: $(FILE).sp
+	$(CC) DEBUG= -o $(OUT) $^
 	mv $(OUT) $(BUILD_DIR)
 
 install:
