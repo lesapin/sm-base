@@ -2,7 +2,7 @@ CC := ./spcomp
 FILE := 
 OUT := $(FILE).smx
 BUILD_DIR := ../plugins
-INSTALL_DIR := ./
+INSTALL_DIR := ../plugins
 
 SFTP_ADDR=
 SFTP_PORT=
