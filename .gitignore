@@ -2,7 +2,7 @@ Makefile
 spcomp
 compile.*
 start_ssh_agent.sh
-sourcemod/bin/*
+sourcemod/bin/empty
 sourcemod/extensions/empty
 sourcemod/data/*
 sourcemod/gamedata/core.games/*
