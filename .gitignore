@@ -3,7 +3,7 @@ spcomp
 compile.*
 start_ssh_agent.sh
 sourcemod/bin/*
-sourcemod/extensions/*
+sourcemod/extensions/empty
 sourcemod/data/*
 sourcemod/gamedata/core.games/*
 sourcemod/gamedata/sdkhooks.games/*
