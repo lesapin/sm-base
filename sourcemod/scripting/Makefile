@@ -1,5 +1,5 @@
 CC := ./spcomp
-FILE := 
+FILE := myplugin
 OUT := $(FILE).smx
 BUILD_DIR := ../plugins
 INSTALL_DIR := ../plugins
